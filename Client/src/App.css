@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+/* Reset default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Style the body */
+body {
+  background-color: #231F20;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* Style the header */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Style the logo */
+.logo {
+  background-color: #231F20;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.logo-image {
+  align-items: center;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* Style the navigation bar container */
+.nav {
+  background-color: #333;
+  /* Set background color */
+  color: #fff;
+  /* Set text color */
+  padding: 10px 20px;
+  /* Add padding to the navbar */
+  position: -webkit-sticky;
+      /* Safari */
+  position: sticky;
+}
+
+.nav ul {
+  list-style-type: none;
+  /* Remove list bullets */
+  display: flex;
+  /* Display links horizontally */
+
+  justify-content: center;
+  align-items: center;
+  /* Center links vertically */
+}
+
+.nav li {
+  float: left;
+}
+
+/* Style the navigation links */
+.nav li a {
+  color: #FF8A00;
+  /* Set link text color */
+  text-decoration: none;
+  /* Remove underline from links */
+  margin-right: 20px;
+  /* Add spacing between links */
+  
+  font-weight: bold;
+
+  display: block;
+  
+  font-size: 20px;
+  
+  text-align: center;
+  
+  padding: 14px 16px;
+}
+
+/*
+/* Style the active link */
+.nav a.active {
+  font-weight: bold;
+  /* Set bold font for active link */
+}
+
+
+/* Responsive design for the navigation bar */
+@media screen and (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    /* Display links vertically */
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav a {
+    margin: 5px 0;
+    /* Add vertical margin to links */
   }
 }

@@ -3,3 +3,19 @@
 <!-- Orange text color: #FF8A00 -->
 
 Table of Contents 
+
+
+Let’s build a simple API with Express and MongoDB: https://medium.com/@ralphplacide/lets-build-a-simple-api-with-express-and-mongodb-5e9aae53add0
+
+
+
+Videos:
+
+
+How to connect MongoDB with NodeJS:
+- Connect Mongodb database using Node JS with express and mongoose for ReactJS App | Hands-on: https://youtu.be/6BU90yDVzm4?si=Va-bUnjkPsj_XBX9
+- How to Connect Node.JS with MongoDB using Mongoose | Connect to a MongoDB Database Using Node.js - https://youtu.be/ACUXjXtG8J4?si=KXN3jrnuo1R08oLc
+
+
+Styling Documentation:
+React bootstrap: https://react-bootstrap.github.io/docs/getting-started/introduction

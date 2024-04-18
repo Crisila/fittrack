@@ -10,7 +10,10 @@ import Navbar from './components/Navbar';
 import './App.css';
 import logoImage from './assets/logo.jpg';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
+  console.log('hi')
   return (
     <Router>
       <div className="App">
@@ -20,13 +23,13 @@ function App() {
         <Navbar />
         
         <Routes>
-          <Route path="/" exact component={Home} />
-          <Route path="/login" component={Login} />
-          <Route path="/register" component={Register} />
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/workout" component={Workout} />
-          <Route path="*" component={() => <h1>404 Not Found</h1>} />
+          <Route path="/" exact element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register/>} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/contact" element={<Contact/>} />
+          <Route path="/workout" element={<Workout/>} />
+          <Route path="*" element={() => <h1>404 Not Found</h1>} />
         </Routes>
 
       

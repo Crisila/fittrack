@@ -1,21 +1,29 @@
-require('dotenv').config()
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
-const pasth = require('path');
+const path = require('path');
 const bcrypt = require('bcrypt');
-const cors = require('cors');
-// const { Schema } = mongoose;
 
-// mongoose.connect(process.env.DB_URL);
+const cors = require('cors');
+
+
+
 
 
 // Initialize the app
 const app = express();
+app.use(express.json());
 app.use(cors());
 
 
-// // Database connection
-// require('./config/db');
+// // Database connectioN
+
+mongoose
+     .connect(
+          process.env.MONGODB_URI
+     )
+     .then(() => console.log('Connected to MongoDB'))
+     .catch(err => console.log('Could not connect to MongoDB', err));
 
 
 // Middleware
@@ -24,11 +32,11 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes 
 app.use('/', require('./routes/Home'));
-app.use('/login', require('./routes/Login'));
-// app.use('/register', require('./routes/Register'));
+app.use('/api', require('./routes/Login'));
+app.use('/api', require('./routes/Register'));
 app.use('/about', require('./routes/About'));
 app.use('/contact', require('./routes/Contact'));
-app.use('/workout', require('./routes/Workout'));
+app.use('/api', require('./routes/Workout'));
 
 
 
@@ -37,11 +45,11 @@ app.use('/workout', require('./routes/Workout'));
 
 app.get('/about', (req, res) => {
      res.send('this is the about page');
-})
+});
 
-app.get ('*', (req, res) => {
+app.get('*', (req, res) => {
      res.status(404).send('<h1>Page not found</h1>');
-})
+});
 
 
 // Listen for connections

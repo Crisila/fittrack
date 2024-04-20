@@ -1,9 +1,9 @@
-import React from "react";
+import RegBox from "../components/RegBox";
 
 
-function Register() {
+const Register = () => {
   return (
-    <div>Register</div>
+    <RegBox />
   )
 }
 export default Register

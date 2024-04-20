@@ -3,6 +3,33 @@
      padding: 100px;
      box-sizing: border-box;
      background-color: #F6F4DD;
+
+     .contact-header {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 20px;
+     }
+
+     .pagetitle-image {
+          width: 20%;
+     }
+
+     .contact-text {
+          display: flex;
+          position: center;
+          align-items: center;
+          justify-content: center;
+          font-size: 20px;
+          font-family:
+               'Avantgarde',
+               'TeX Gyre Adventor',
+               'URW Gothic L',
+               'sans-serif';
+          color: #000;
+          margin-bottom: 20px;
+          right: 150px;
+     }
 }
 
 

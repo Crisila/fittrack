@@ -1,8 +1,8 @@
-import React from "react";
+import LoginBox from "../components/LoginBox";
 
 function Login() {
   return (
-    <div>Login</div>
-  )
+    <LoginBox />  
+  );
 }
 export default Login

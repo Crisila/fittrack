@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema({
           type: String,
           required: true
      }
-});
+}, {collection: 'users'});
 
 userSchema.methods.generateAuthToken = function () {
      const token = jwt.sign({ _id: this._id }, process.env.JWTPRIVATEKEY, {
@@ -33,4 +33,7 @@ const validate = (data) => {
      return schema.validate(data);
 }
 
-module.exports = {userSchema, validate};
+module.exports = {
+     userSchema, 
+     validate, 
+     userModel};

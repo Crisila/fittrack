@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const RegBox = () => {
@@ -8,16 +8,19 @@ const RegBox = () => {
      const [email, setEmail] = useState("");
      const [password, setPassword] = useState("");
 
+     const Navigate = useNavigate();
+
      const handleSubmit = (e) => {
           e.preventDefault();
           axios
-               .post('http://localhost:4000/api/register', {
+               .post('http://localhost:4000/register', {
                     name,
                     email,
                     password
                })
                .then((res) => {
                     console.log(res.data);
+                    Navigate("/login");
                })
                .catch((err) => {
                     console.error('Error:', err.message);

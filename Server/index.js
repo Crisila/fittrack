@@ -32,8 +32,8 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes 
 app.use('/', require('./routes/Home'));
-app.use('/api', require('./routes/Login'));
-app.use('/api', require('./routes/Register'));
+app.use('/', require('./routes/Login'));
+app.use('/', require('./routes/Register'));
 app.use('/about', require('./routes/About'));
 app.use('/contact', require('./routes/Contact'));
 app.use('/api', require('./routes/Workout'));
@@ -46,6 +46,8 @@ app.use('/api', require('./routes/Workout'));
 app.get('/about', (req, res) => {
      res.send('this is the about page');
 });
+
+
 
 app.get('*', (req, res) => {
      res.status(404).send('<h1>Page not found</h1>');

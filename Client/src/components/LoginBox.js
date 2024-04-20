@@ -12,7 +12,7 @@ const LoginBox = () => {
      const handleSubmit = (e) => {
           e.preventDefault();
           axios
-               .post('http://localhost:4000/api/login', {
+               .post('http://localhost:4000/login', {
                     email,
                     password
                })
@@ -31,7 +31,7 @@ const LoginBox = () => {
        <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
             <div className="bg-white p3 rounded w-25">
                  <h2>Login</h2>
-                 <form>
+                 <form onSubmit={handleSubmit}>
                       <div className="mb-3">
                            <label htmlFor="email">
                                 <strong>
@@ -43,7 +43,8 @@ const LoginBox = () => {
                                 className="form-control rounded-0"
                                 id="email"
                                 placeholder="Enter your email"
-                                autoComplete="off" />
+                                autoComplete="off" 
+                                onChange={(e) => setEmail(e.target.value)} />
                       </div>
 
                       <div className="mb-3">
@@ -57,7 +58,8 @@ const LoginBox = () => {
                                 className="form-control rounded-0"
                                 id="password"
                                 placeholder="Enter your password"
-                                autoComplete="off" />
+                                autoComplete="off"
+                                onChange={(e) => setPassword(e.target.value)}  />
                       </div>
                       <button type="submit" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
                            Login

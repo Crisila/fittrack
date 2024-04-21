@@ -2,7 +2,21 @@
 <!-- Light text color: #F6F4DD -->
 <!-- Orange text color: #FF8A00 -->
 
-Table of Contents 
+FitTrack By Crisila Ballecer
+
+This is a fitness tracker that allows users to track their workouts. It has the capability to track the following:
+
+- Exercise name
+- Date
+- Weight
+- Sets
+- Reps
+- Duration
+- Distance
+
+- [ ] Tech stack (1)
+- [ ] API documentation of routes (1)
+- [ ] Future goals / plans (1)
 
 
 Let’s build a simple API with Express and MongoDB: https://medium.com/@ralphplacide/lets-build-a-simple-api-with-express-and-mongodb-5e9aae53add0

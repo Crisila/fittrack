@@ -16,18 +16,20 @@ router.post('/login', async (req, res) => {
           const { email, password } = req.body;
           const user = await userModel.findOne({ email });
           if (!user) {
-               return res.status(400).send({ error: 'InvalidCredentials', message: 'Invalid email or password' });
+               return res.status(400).send({ error: 'InvalidCredentials', message: 'No user found' });
           }
 
           // Compare password
           const validPassword = await bcrypt.compare(password, user.password);
           if (!validPassword)
-               return res.status(400).send('Invalid email or password');
-
-          // Generate JWT token
-          const token = user.generateAuthToken();
-          res.status(200).send({ data: token, message: 'Logged in successfully!' });
-     } catch (error) {
+          return res.status(400).send('Invalid email or password');
+     
+     
+     // Generate JWT token
+     const token = user.generateAuthToken();
+     res.status(200).send({ data: token, message: 'Logged in successfully!' });
+} catch (error) {
+          console.log(error)
           res.status(500).send({ message: "Internal Server Error" });
      }
 });

@@ -9,6 +9,7 @@ import Workout from './pages/Workout';
 import Navbar from './components/Navbar';
 import './App.css';
 import logoImage from './assets/logo.jpg';
+import homeImg from './assets/homepage_background.jpg'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -21,7 +22,8 @@ function App() {
           <Link to="/"><img src={logoImage} alt="Logo" className="logo-image" /></Link>
         </div>
         <Navbar />
-        
+
+       
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/login" element={<Login />} />

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "../Styles/Home.css";
+import homeImg from "../assets/homepage_background.jpg"
 
 
 function Home() {
@@ -19,8 +21,14 @@ function Home() {
   }, [initializeData]);
   const handlebuttonclick = () => {setInitData(!initializeData)};
   return (
-    <div>Home
+    <div className="home">
 
+      <div className="home-header">
+        <p>
+          Get on track with FitTrack
+        </p>
+
+      </div>
 
       <button onClick={handlebuttonclick}>
         click me

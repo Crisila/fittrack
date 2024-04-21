@@ -18,7 +18,7 @@ const LoginBox = () => {
                })
                .then((res) => {
                     console.log(res.data);
-                    navigate("/home");
+                    navigate("/workouts");
                })
                .catch((err) => {
                     console.error('Error:', err.message);

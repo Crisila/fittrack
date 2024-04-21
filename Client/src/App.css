@@ -1,5 +1,8 @@
 
-
+:root {
+  --primary-color: green;
+  --secondary-color: red;
+}
 
 /* Reset default margin and padding for all elements */
 * {

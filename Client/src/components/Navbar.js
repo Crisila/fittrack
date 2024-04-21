@@ -41,6 +41,9 @@ function Navigation() {
                          <Nav className="me-auto">
                               <Nav.Link href="/about">About</Nav.Link>
                               <Nav.Link href="/contact">Contact</Nav.Link>
+                              {/* TO DO: after user login, redirect to workout page
+                              {/* TO DO: Nav changes to have logout and Login/Register is gone */}
+                              <Nav.Link href="/workouts">Workout</Nav.Link>
                               <Nav.Link href="/login">Login/Register</Nav.Link>
                          </Nav>
                     </Container>

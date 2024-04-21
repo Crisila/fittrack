@@ -1,8 +1,6 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
-const path = require('path');
-const bcrypt = require('bcrypt');
 
 const cors = require('cors');
 
@@ -12,7 +10,10 @@ const cors = require('cors');
 
 // Initialize the app
 const app = express();
+
+// Middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 
@@ -26,32 +27,17 @@ mongoose
      .catch(err => console.log('Could not connect to MongoDB', err));
 
 
-// Middleware
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+
 
 // Routes 
 app.use('/', require('./routes/Home'));
-app.use('/', require('./routes/Login'));
-app.use('/', require('./routes/Register'));
+app.use('/login', require('./routes/Login'));
+app.use('/register', require('./routes/Register'));
 app.use('/about', require('./routes/About'));
 app.use('/contact', require('./routes/Contact'));
-app.use('/api', require('./routes/Workout'));
+app.use('/workouts', require('./routes/Workout'));
 
 
-
-
-
-
-app.get('/about', (req, res) => {
-     res.send('this is the about page');
-});
-
-
-
-app.get('*', (req, res) => {
-     res.status(404).send('<h1>Page not found</h1>');
-});
 
 
 // Listen for connections

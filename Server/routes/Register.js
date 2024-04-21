@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 const { userModel } = require('../models/user');
 
 
-router.post('/register', async (req, res) => {
+router.post('/', async (req, res) => {
 
      const { name, email, password } = req.body;
      // Check if user already exists

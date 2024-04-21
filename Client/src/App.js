@@ -9,7 +9,7 @@ import Workout from './pages/Workout';
 import Navbar from './components/Navbar';
 import './App.css';
 import logoImage from './assets/logo.jpg';
-import homeImg from './assets/homepage_background.jpg'
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 

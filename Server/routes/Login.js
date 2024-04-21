@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 const { userModel } = require('../models/user');
 
 
-router.post('/login', async (req, res) => {
+router.post('/', async (req, res) => {
 
      try {
 

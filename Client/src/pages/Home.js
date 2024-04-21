@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../Styles/Home.css";
-import homeImg from "../assets/homepage_background.jpg"
+
 
 
 function Home() {

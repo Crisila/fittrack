@@ -1,10 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import useWorkoutsContext from "../context/useWorkoutsContext";
 
-const WorkoutForm = () => {
-     const {dispatch} = useWorkoutsContext();
+
+const WorkoutForm = ({workouts, setWorkouts}) => {
 
      const [name, setName] = useState("");
      const [reps, setReps] = useState("");
@@ -13,7 +11,7 @@ const WorkoutForm = () => {
      const [time, setTime] = useState("");
      const [date, setDate] = useState("");
      const [error, setError] = useState("");
-     const navigate = useNavigate();
+
 
      const handleSubmit = async (e) => {
           e.preventDefault();
@@ -30,19 +28,20 @@ const WorkoutForm = () => {
           try {
                const response = await 
                axios
-               .post('http://localhost:4000/workouts', workout);console.log('Response:', response);
+               .post('http://localhost:4000/workouts', workout);
+               
+               console.log('Response:', response);
 
                if (response.status === 201) {
-                    // setName('');
-                    // setReps('');
-                    // setWeight('');
-                    // setDistance('');
-                    // setTime('');
-                    // setDate('');
-                    // setError(null);
+                    setName('');
+                    setReps('');
+                    setWeight('');
+                    setDistance('');
+                    setTime('');
+                    setDate('');
+                    setError(null);
                     console.log('new workout added', response.data);
-                    dispatch({type: 'CREATE_WORKOUT', payload: response.data});
-                    navigate("/workouts");
+                    setWorkouts ([response.data, ...workouts]);
                } else {
                     console.error('Unexpected response status:', response.status);
                }

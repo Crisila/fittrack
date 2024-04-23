@@ -4,6 +4,10 @@ import axios from "axios";
 import WorkoutView from "../components/WorkoutView";
 import WorkoutForm from '../components/WorkoutForm';
 
+import '../Styles/Workouts.css';
+
+
+
 function Workout() {
   const [workouts, setWorkouts] = useState([]);
 
@@ -24,17 +28,19 @@ function Workout() {
 
 
   return (
-    <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
-      <div className="workout">
+    <div className="workouts-page">
+
+      <WorkoutForm workouts={workouts} setWorkouts={setWorkouts} />
+      <div>
         {workouts.map((workout) => (
           <div key={workout._id}>
-            <h2>Workout View</h2>
+  
             <WorkoutView workout={workout} />
           </div>
+          
         ))}
-        <div className="page-workoutform">
-          <WorkoutForm />
-        </div>
+
+
       </div>
     </div>
   );

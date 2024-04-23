@@ -2,7 +2,14 @@ import LoginBox from "../components/LoginBox";
 
 function Login() {
   return (
-    <LoginBox />  
+
+ 
+
+    <div className="login-page">
+
+      <LoginBox />
+
+    </div>
   );
 }
-export default Login
+export default Login;

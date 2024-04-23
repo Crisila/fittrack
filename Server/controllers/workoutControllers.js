@@ -28,7 +28,8 @@ const getWorkout = async (req, res) => {
 // create a new workout
 const createWorkout = async (req, res) => {
      const { name, reps, weight, distance, time, date } = req.body;
-
+     
+     
      // add doc to db
 
      try {

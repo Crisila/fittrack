@@ -5,6 +5,7 @@ import contactImg from '../assets/contact-image.jpg';
 function Contact() {
   return (
     <div className="contact">
+      
      <div className="contact-header">
       <img src={contactImg} alt="contact-me" className="pagetitle-image" />
      </div>

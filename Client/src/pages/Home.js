@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../Styles/Home.css";
+import { useNavigate } from "react-router-dom";
 
 
 
 function Home() {
   const [data, setData] = useState([]);
   const [initializeData, setInitData] = useState([false]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -19,7 +21,14 @@ function Home() {
         console.log(err);
       });
   }, [initializeData]);
-  const handlebuttonclick = () => {setInitData(!initializeData)};
+
+  const handleLoginClick = () => {
+    navigate("/login");
+  };
+
+  const handleRegisterClick = () => {
+    navigate("/register");
+  };
   return (
     <div className="home">
 
@@ -30,9 +39,8 @@ function Home() {
 
       </div>
 
-      <button onClick={handlebuttonclick}>
-        click me
-      </button>
+      <button onClick={handleLoginClick}>But first, Login</button>
+      <button onClick={handleRegisterClick}>New here!</button>
     </div>
 
   )

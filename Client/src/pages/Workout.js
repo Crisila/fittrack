@@ -14,7 +14,7 @@ function Workout() {
   useEffect(() => {
     const fetchWorkouts = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/workouts');
+        const response = await axios.get('http://localhost:4000/api/workouts');
         if (response.status === 200) {
           setWorkouts(response.data);
         }
@@ -31,6 +31,7 @@ function Workout() {
     <div className="workouts-page">
 
       <WorkoutForm workouts={workouts} setWorkouts={setWorkouts} />
+
       <div>
         {workouts.map((workout) => (
           <div key={workout._id}>

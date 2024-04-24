@@ -12,7 +12,7 @@ const LoginBox = () => {
      const handleSubmit = (e) => {
           e.preventDefault();
           axios
-               .post('http://localhost:4000/login', {
+               .post('http://localhost:4000/api/login', {
                     email,
                     password
                })

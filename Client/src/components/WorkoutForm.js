@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 
 
-const WorkoutForm = ({workouts, setWorkouts}) => {
+const WorkoutForm = ({ workouts, setWorkouts }) => {
 
      const [name, setName] = useState("");
      const [reps, setReps] = useState("");
@@ -15,7 +15,6 @@ const WorkoutForm = ({workouts, setWorkouts}) => {
 
      const handleSubmit = async (e) => {
           e.preventDefault();
-          console.log('Form submitted');
           const workout = {
                name,
                reps,
@@ -24,13 +23,15 @@ const WorkoutForm = ({workouts, setWorkouts}) => {
                time,
                date
           };
+          console.log(workout);
+
+
 
           try {
                const response = await 
                axios
-               .post('http://localhost:4000/workouts', workout);
-               
-               console.log('Response:', response);
+               .post('http://localhost:4000/api/workouts', workout);
+               console.log(response.status);
 
                if (response.status === 201) {
                     setName('');
@@ -40,19 +41,21 @@ const WorkoutForm = ({workouts, setWorkouts}) => {
                     setTime('');
                     setDate('');
                     setError(null);
-                    console.log('new workout added', response.data);
-                    setWorkouts ([response.data, ...workouts]);
+                    console.log('New workout added', response.data);
+                    setWorkouts([response.data, ...workouts]);
                } else {
                     console.error('Unexpected response status:', response.status);
+                    setError('Unexpected response status: ' + response.status);
                }
           } catch (error) {
                setError(error.message);
                console.error('Error:', error.message);
+
           }
      };
 
 
-  
+
      return (
           <form className="form-create" onSubmit={handleSubmit}>
                <h3>

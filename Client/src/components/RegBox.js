@@ -13,7 +13,7 @@ const RegBox = () => {
      const handleSubmit = (e) => {
           e.preventDefault();
           axios
-               .post('http://localhost:4000/register', {
+               .post('http://localhost:4000/api/register', {
                     name,
                     email,
                     password

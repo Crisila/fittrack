@@ -12,7 +12,7 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/")
+      .get("http://localhost:4000/api/")
       .then((res) => {
         console.log('data', res.data);
         setData(res.data);

@@ -47,12 +47,12 @@ mongoose
 
 
 // Routes 
-app.use('/', require('./routes/Home'));
-app.use('/login', require('./routes/Login'));
-app.use('/register', require('./routes/Register'));
-app.use('/about', require('./routes/About'));
-app.use('/contact', require('./routes/Contact'));
-app.use('/workouts', require('./routes/Workout'));
+app.use('/api', require('./routes/Home'));
+app.use('/api/login', require('./routes/Login'));
+app.use('/api/register', require('./routes/Register'));
+app.use('/api/about', require('./routes/About'));
+app.use('/api/contact', require('./routes/Contact'));
+app.use('/api/workouts', require('./routes/Workout'));
 
 
 

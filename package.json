@@ -4,12 +4,13 @@
   "description": "<!-- Dark background color: #231F20 --> <!-- Light text color: #F6F4DD --> <!-- Orange text color: #FF8A00 -->",
   "main": "server/index.js",
  "scripts": {
+  "init": "cd Client && npm install && cd ../Server && npm install",
   "test": "echo \"Error: no test specified\" && exit 1",
   "dev:server": "cd Server && nodemon index.js",
   "dev:client": "cd Client && npm run dev",
-  "build": "cd Client && npm install",
-  "start:server": "cd server && nodemon index.js",
-  "start": "cd Client && npm run build && cd ../Server && npm run start:server",
+  "build": "cd Server && npm install",
+  "start:server": "cd Server nodemon index.js",
+  "start": "cd Client && npm install && cd ../Server && npm run start:server",
   "dev": "npm run dev:server && npm run dev:client"
 
 }

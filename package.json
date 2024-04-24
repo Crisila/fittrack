@@ -7,8 +7,8 @@
   "test": "echo \"Error: no test specified\" && exit 1",
   "dev:server": "cd Server && nodemon index.js",
   "dev:client": "cd Client && npm run dev",
-  "build": "cd Client && npm run build",
-  "start:server": "cd server && nodemon index.js",
+  "build": "cd Server && npm install",
+  "start:server": "cd Server && nodemon index.js",
   "start": "cd Client && npm run build && cd ../Server && npm run start:server",
   "dev": "npm run dev:server && npm run dev:client"
 

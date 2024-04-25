@@ -7,24 +7,24 @@ FitTracker is a fitness tracker designed to help users monitor and manage their 
 ## Tech stack
 ### Frontend:
 
-React: Frontend library for building user interfaces.
-React Router: For managing routes in the React application.
-Axios: For making HTTP requests to your backend API.
-Bootstrap and React Bootstrap: For styling and UI components.
+- React: Frontend library for building user interfaces.
+- React Router: For managing routes in the React application.
+- Axios: For making HTTP requests to your backend API.
+- Bootstrap and React Bootstrap: For styling and UI components.
 
 ### Backend:
-Node.js with Express: Backend server framework for handling API routes and business logic.
-MongoDB with Mongoose: Database system and ODM for storing and managing workout data.
-bcrypt: For hashing user passwords securely.
-JWT (jsonwebtoken): For user authentication and authorization.
-Joi and joi-password-complexity: For input validation and password complexity requirements.
-Cors: Middleware for enabling Cross-Origin Resource Sharing.
+- Node.js with Express: Backend server framework for handling API routes and business logic.
+- MongoDB with Mongoose: Database system and ODM for storing and managing workout data.
+- bcrypt: For hashing user passwords securely.
+- JWT (jsonwebtoken): For user authentication and authorization.
+- Joi and joi-password-complexity: For input validation and password complexity requirements.
+- Cors: Middleware for enabling Cross-Origin Resource Sharing.
 
 
 ### Development Tools:
-Nodemon: Development dependency for automatic server restarts during development.
-dotenv: For managing environment variables in development.
-Validator: For additional input validation if needed.
+- Nodemon: Development dependency for automatic server restarts during development.
+- dotenv: For managing environment variables in development.
+- Validator: For additional input validation if needed.
 
 
 ## API documentation of routes

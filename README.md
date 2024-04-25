@@ -29,11 +29,11 @@ Validator: For additional input validation if needed.
 
 ## API documentation of routes
 Workout:
-GET /workouts --> Get all the workout docs
-POST /workouts --> Create a new workout document
-GET /workouts/:id --> Get a specific workout document
-PATCH /workouts/:id --> Update a specific workout document
-DELETE /workouts/:id --> Delete a specific workout document
+- [ ] GET /workouts --> Get all the workout docs
+- [ ] POST /workouts --> Create a new workout document
+- [ ] GET /workouts/:id --> Get a specific workout document
+- [ ] PATCH /workouts/:id --> Update a specific workout document
+- [ ] DELETE /workouts/:id --> Delete a specific workout document
 
 Future goals / plans
 - [ ] Add nutritions

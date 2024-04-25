@@ -37,8 +37,11 @@ Workout:
 
 Future goals / plans
 - [ ] Add nutritions
+- [ ] Add logout
 - [ ] Change login and registration coding
-- [ ] add Delete and Edit
+- [ ] Add Delete and Edit
+- [ ] Add better CSS and Bootstrap
+- [ ] Responsiveness
 - [ ] Customize login
 - [ ] Add error handling
 
